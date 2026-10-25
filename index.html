@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acadense - Execute academic tasks with sense</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ONBOARDING MODAL -->
+
+    <div id="onboarding-modal" class="modal-overlay hidden">
+
+        <div class="modal-card">
+
+            <div class="modal-brand">
+
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div>
+                    <h2>Acadense</h2>
+                    <p>EXECUTE ACADEMIC TASKS WITH SENSE</p>
+                </div>
+
+            </div>
+
+            <h3>What should we call you?</h3>
+
+            <p class="modal-sub">
+                Your name appears in your daily greeting and stays private on this device.
+            </p>
+
+            <div class="input-group">
+
+                <input
+                    type="text"
+                    id="username-input"
+                    placeholder="Your name"
+                    value="User"
+                >
+
+            </div>
+
+            <button id="save-username-btn" class="primary-btn">
+
+                <i class="fa-solid fa-check"></i>
+                Continue to Acadense
+
+            </button>
+
+        </div>
+
+    </div>
+
+        <!-- ABOUT ACADENSE MODAL -->
+
+    <div id="about-acadense-modal" class="modal-overlay hidden">
+
+        <div class="modal-card about-modal-card">
+
+            <div class="modal-brand">
+
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div>
+                    <h2>Acadense</h2>
+                    <p>EXECUTE ACADEMIC TASKS WITH SENSE</p>
+                </div>
+
+            </div>
+
+
+            <span class="view-eyebrow">
+                ABOUT THE PROJECT
+            </span>
+
+            <h3>
+                Acadense
+            </h3>
+
+            <p class="about-project-title">
+                To-do List System in Academic Workflows of Grade 12 Students
+            </p>
+
+
+            <div class="about-section">
+
+                <h4>
+                    What is Acadense?
+                </h4>
+
+                <p>
+                    Acadense is a time management and to-do list system
+                    designed to help Grade 12 students organize their
+                    academic workflows. It brings tasks, schedules,
+                    notes, and time-management tools together in one
+                    focused workspace.
+                </p>
+
+            </div>
+
+
+            <div class="about-section">
+
+                <h4>
+                    Developed for
+                </h4>
+
+                <p>
+                    <a
+                        href="https://www.facebook.com/IIHCLaFortezaOfficialPage"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="about-link"
+                    >
+                        Integrated Innovation and Hospitality Colleges,
+                        La Forteza
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div class="about-section">
+
+                <h4>
+                    The idea behind Acadense
+                </h4>
+
+                <p>
+                    Academic work can become difficult to manage when
+                    tasks, deadlines, and personal routines compete for
+                    attention. Acadense was created to provide a simpler
+                    space where students can plan what matters, keep
+                    track of their progress, and work at their own pace.
+                </p>
+
+            </div>
+
+
+            <div class="about-section">
+
+                <h4>
+                    Created by
+                </h4>
+
+                <p>
+                    Grade 12 Information and Communications Technology (ICT) Students of Integrated Innovation and
+                    Hospitality Colleges, La Forteza.
+                </p>
+
+                <br>
+
+                <h4>
+                    School Year 2026-2027
+                </h4>
+
+            </div>
+
+
+            <div class="about-social">
+
+                <span class="about-social-label">
+                    FOLLOW THE CREATORS
+                </span>
+
+                <a
+                    href="https://www.facebook.com/acads.anj"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="facebook-btn"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                    Angel Joy Laguilles
+                </a>
+
+                <a
+                    href="https://www.facebook.com/kassel.rosal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="facebook-btn"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                    Kassel Brian Rosal
+                </a>
+
+                <a
+                    href="https://www.facebook.com/brianjerock.favila/about"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="facebook-btn"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                    Jerome Favila
+                </a>
+
+                <a
+                    href="https://www.facebook.com/cyljan.carbonera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="facebook-btn"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                    Cyljan Carbonera
+                </a>
+
+            </div>
+
+
+            <button
+                id="close-about-acadense-btn"
+                class="primary-btn about-close-btn"
+                type="button"
+            >
+                <i class="fa-solid fa-xmark"></i>
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN APPLICATION -->
+
+    <div class="app-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-top">
+
+                <div class="brand">
+
+                    <div class="brand-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+
+                    <div class="brand-text">
+
+                        <h1>Acadense</h1>
+
+                        <span>
+                            EXECUTE ACADEMIC TASKS WITH SENSE
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <nav class="nav-menu">
+
+                    <a href="#" class="nav-item active" data-target="today-view">
+                        <i class="fa-solid fa-arrow-up-right-dots"></i>
+                        <span>Today</span>
+                    </a>
+
+                    <a href="#" class="nav-item" data-target="todo-view">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>To-do</span>
+                    </a>
+
+                    <a href="#" class="nav-item" data-target="calendar-view">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>Calendar</span>
+                    </a>
+
+                    <a href="#" class="nav-item" data-target="timesuite-view">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Time suite</span>
+                    </a>
+
+                    <a href="#" class="nav-item" data-target="settings-view">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+                <div class="wind-down-card">
+
+                    <div class="wind-down-header">
+
+                        <i class="fa-solid fa-moon"></i>
+
+                        <span>WIND DOWN</span>
+
+                    </div>
+
+                    <p>
+                        A gentle plan beats a perfect one.
+                    </p>
+
+                </div>
+
+
+                <!-- ABOUT ACADENSE -->
+
+                <button
+                    class="about-acadense-btn"
+                    id="about-acadense-btn"
+                    title="About Acadense"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <span>About Acadense</span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+
+            <!-- TODAY VIEW -->
+
+            <section id="today-view" class="view-section active">
+
+                <header class="view-header">
+
+                    <div class="date-tag" id="current-date-tag">
+                        FRIDAY, AUGUST 28
+                    </div>
+
+                    <div class="greeting-row">
+
+                        <h2 id="greeting-title">
+                            Good morning, User.
+                        </h2>
+
+                        <button
+                            class="edit-name-btn"
+                            id="edit-name-trigger"
+                        >
+                            <i class="fa-solid fa-pen"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="header-badge">
+
+                        <span class="pulse-dot"></span>
+                        Local & private
+
+                    </div>
+
+                </header>
+
+
+                <div class="dashboard-grid">
+
+
+                    <!-- TODAY'S ANCHOR -->
+
+                    <div class="card anchor-card">
+
+                        <div class="card-header">
+
+                            <span class="card-tag">
+                                <i class="fa-solid fa-anchor"></i>
+                                TODAY'S ANCHOR
+                            </span>
+
+                        </div>
+
+                        <p class="anchor-subtitle">
+                            One meaningful thing is enough.
+                        </p>
+
+                        <h3
+                            class="anchor-title"
+                            id="anchor-display-text"
+                        >
+                            Shape the afternoon brief
+                        </h3>
+
+                        <div class="anchor-progress-row">
+
+                            <div class="progress-bar-bg">
+
+                                <div
+                                    class="progress-bar-fill"
+                                    id="anchor-progress-fill"
+                                    style="width: 20%;"
+                                ></div>
+
+                            </div>
+
+                            <span
+                                class="progress-text"
+                                id="anchor-progress-text"
+                            >
+                                1 of 5 small wins
+                            </span>
+
+                        </div>
+
+                        <div class="card-bg-circle c1"></div>
+                        <div class="card-bg-circle c2"></div>
+
+                    </div>
+
+
+                    <!-- TIME SUITE SHORTCUT -->
+
+                    <div
+                        class="card timesuite-card-mini"
+                        data-jump="timesuite-view"
+                    >
+
+                        <div class="card-header">
+
+                            <span class="card-icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </span>
+
+                            <span class="action-hint">
+                                Open suite
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+
+                        </div>
+
+                        <div
+                            class="timesuite-mini-content"
+                            id="timesuite-mini-content"
+                        >
+
+                            <h3>
+                                Settle into the work.
+                            </h3>
+
+                            <p>
+                                A focused timer or an open-ended watch.
+                                Choose your pace.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PENDING TASKS -->
+
+                    <div class="card tasks-card-mini">
+
+                        <div class="card-header">
+
+                            <h3 class="card-section-title">
+
+                                Pending tasks
+
+                                <span
+                                    class="badge-count"
+                                    id="pending-count"
+                                >
+                                    4
+                                </span>
+
+                            </h3>
+
+                            <div class="card-dots">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+
+                        </div>
+
+                        <ul
+                            class="mini-task-list"
+                            id="mini-pending-list"
+                        ></ul>
+
+                    </div>
+
+
+                    <!-- UPCOMING NOTES -->
+
+                    <div class="card notes-card-mini">
+
+                        <div class="card-header">
+
+                            <h3 class="card-section-title">
+                                Upcoming notes
+                            </h3>
+
+                            <span
+                                class="action-hint"
+                                data-jump="calendar-view"
+                            >
+                                View calendar
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+
+                        </div>
+
+                        <div
+                            class="mini-notes-list"
+                            id="upcoming-notes-list"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TO-DO VIEW -->
+
+            <section id="todo-view" class="view-section">
+
+                <header class="view-header">
+
+                    <span class="view-eyebrow">
+                        YOUR OPEN LOOPS
+                    </span>
+
+                    <h2>
+                        To-do list
+                    </h2>
+
+                    <span
+                        class="header-counter"
+                        id="todo-total-counter"
+                    >
+                        4 things in motion
+                    </span>
+
+                </header>
+
+
+                <div class="todo-container">
+
+                    <div class="todo-input-row">
+
+                        <div class="custom-input-wrapper">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            <input
+                                type="text"
+                                id="new-task-input"
+                                placeholder="Add something to the desk..."
+                            >
+
+                        </div>
+
+
+                        <div class="custom-select-wrapper">
+
+                            <select id="new-task-category">
+
+                                <option value="Work">Work</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Home">Home</option>
+
+                            </select>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </div>
+
+
+                        <button
+                            id="add-task-btn"
+                            class="primary-btn"
+                        >
+
+                            <i class="fa-solid fa-plus"></i>
+                            Add task
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="todo-filters-row">
+
+                        <div class="filter-tabs">
+
+                            <button
+                                class="filter-btn active"
+                                data-filter="all"
+                            >
+                                All
+                                <span id="count-all">5</span>
+                            </button>
+
+                            <button
+                                class="filter-btn"
+                                data-filter="active"
+                            >
+                                Active
+                                <span id="count-active">4</span>
+                            </button>
+
+                            <button
+                                class="filter-btn"
+                                data-filter="done"
+                            >
+                                Done
+                                <span id="count-done">1</span>
+                            </button>
+
+                        </div>
+
+                        <button
+                            class="clear-completed-btn"
+                            id="clear-completed"
+                        >
+                            Clear completed
+                        </button>
+
+                    </div>
+
+
+                    <div class="todo-list-card">
+
+                        <ul
+                            id="full-todo-list"
+                            class="task-list-items"
+                        ></ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CALENDAR VIEW -->
+
+            <section id="calendar-view" class="view-section">
+
+                <header class="view-header">
+
+                    <span class="view-eyebrow">
+                        MAKE ROOM FOR WHAT MATTERS
+                    </span>
+
+                    <h2>
+                        Calendar
+                    </h2>
+
+                    <button
+                        class="secondary-btn"
+                        id="go-to-today-btn"
+                    >
+                        Today
+                    </button>
+
+                </header>
+
+
+                <div class="calendar-layout">
+
+                    <div class="card calendar-main-card">
+
+                        <div class="cal-nav-row">
+
+                            <h3 id="cal-month-year">
+                                August 2026
+                            </h3>
+
+                            <span class="cal-instruction">
+                                Tap a day to see its notes
+                            </span>
+
+                            <div class="cal-nav-arrows">
+
+                                <button id="prev-month">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </button>
+
+                                <button id="next-month">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="cal-weekdays">
+
+                            <span>SUN</span>
+                            <span>MON</span>
+                            <span>TUE</span>
+                            <span>WED</span>
+                            <span>THU</span>
+                            <span>FRI</span>
+                            <span>SAT</span>
+
+                        </div>
+
+
+                        <div
+                            class="cal-grid"
+                            id="cal-days-grid"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="card calendar-sidebar-card">
+
+                        <div class="selected-day-header">
+
+                            <span class="selected-day-label">
+                                SELECTED DAY
+                            </span>
+
+                            <h3 id="selected-date-display">
+                                Aug 28
+                            </h3>
+
+                        </div>
+
+
+                        <div
+                            class="selected-day-notes-box"
+                            id="selected-day-notes-container"
+                        ></div>
+
+
+                        <div class="add-note-form">
+
+                            <span class="add-note-label">
+                                ADD TO THIS DAY
+                            </span>
+
+                            <input
+                                type="text"
+                                id="cal-note-title"
+                                placeholder="Title"
+                            >
+
+                            <textarea
+                                id="cal-note-desc"
+                                placeholder="A little context (optional)"
+                            ></textarea>
+
+                            <div class="cal-form-row">
+
+                                <select id="cal-note-type">
+
+                                    <option value="Event">Event</option>
+                                    <option value="Task">Task</option>
+                                    <option value="Note">Note</option>
+
+                                </select>
+
+
+                                <button
+                                    id="save-cal-note"
+                                    class="primary-btn"
+                                >
+
+                                    <i class="fa-solid fa-plus"></i>
+                                    Save
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TIME SUITE VIEW -->
+
+            <section
+                id="timesuite-view"
+                class="view-section"
+            >
+
+                <header class="view-header">
+
+                    <span class="view-eyebrow">
+                        FIND YOUR RHYTHM
+                    </span>
+
+                    <h2>
+                        Time suite
+                    </h2>
+
+                    <span class="no-rush-badge">
+                        <i class="fa-regular fa-clock"></i>
+                        No rush
+                    </span>
+
+                </header>
+
+
+                <div class="timesuite-grid">
+
+                    <div class="card pomodoro-card">
+
+                        <div class="pomo-top">
+
+                            <div>
+
+                                <span
+                                    class="pomo-type-label"
+                                    id="pomo-label"
+                                >
+                                    POMODORO
+                                </span>
+
+                                <p>
+                                    Protect a pocket of attention.
+                                </p>
+
+                            </div>
+
+                            <div class="pomo-corner-icon">
+                                <i class="fa-solid fa-stopwatch"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="pomo-modes">
+
+                            <button
+                                class="pomo-mode-btn active"
+                                data-mode="focus"
+                            >
+                                Focus
+                            </button>
+
+                            <button
+                                class="pomo-mode-btn"
+                                data-mode="short"
+                            >
+                                Short
+                            </button>
+
+                            <button
+                                class="pomo-mode-btn"
+                                data-mode="long"
+                            >
+                                Long
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            class="pomo-timer-display"
+                            id="pomo-time-display">
+                            20:00
+                        </div>
+
+
+                        <div
+                            class="pomo-status-text"
+                            id="pomo-status-sub"
+                        >
+                            In the room with your work.
+                        </div>
+
+
+                        <div class="pomo-adjust-row">
+
+                            <button
+                                class="pomo-adj-btn"
+                                id="pomo-minus"
+                            >
+                                - 5 minutes
+                            </button>
+
+                            <button
+                                class="pomo-adj-btn"
+                                id="pomo-plus"
+                            >
+                                + 5 minutes
+                            </button>
+
+                        </div>
+
+
+                        <div class="pomo-action-row">
+
+                            <button
+                                id="pomo-toggle-btn"
+                                class="pomo-main-btn"
+                            >
+                                <i class="fa-solid fa-pause"></i>
+                                Pause
+                            </button>
+
+                            <button
+                                id="pomo-reset-btn"
+                                class="pomo-icon-btn"
+                            >
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="pomo-bg-blob"></div>
+
+                    </div>
+
+
+                    <div class="card stopwatch-card">
+
+                        <div class="stopwatch-top">
+
+                            <div>
+
+                                <span class="pomo-type-label">
+                                    STOPWATCH
+                                </span>
+
+                                <p>
+                                    For work without a finish line.
+                                </p>
+
+                            </div>
+
+                            <div class="pomo-corner-icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="stopwatch-display"
+                            id="sw-display"
+                        >
+                            00:00:00.000
+                        </div>
+
+
+                        <div class="stopwatch-action-row">
+
+                            <button
+                                id="sw-toggle-btn"
+                                class="pomo-main-btn stop-red"
+                            >
+                                <i class="fa-solid fa-start"></i>
+                                Start
+                            </button>
+
+                            <button
+                                id="sw-lap-btn"
+                                class="pomo-secondary-btn"
+                            >
+                                Lap
+                            </button>
+
+                            <button
+                                id="sw-reset-btn"
+                                class="pomo-icon-btn"
+                            >
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            class="laps-container"
+                            id="laps-list"
+                        ></div>
+
+
+                        <div class="stopwatch-footer-note">
+
+                            <i class="fa-solid fa-circle-info"></i>
+                            A note for later: timers reset when you close the tab.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SETTINGS VIEW -->
+
+            <section
+                id="settings-view"
+                class="view-section"
+            >
+
+                <header class="view-header">
+
+                    <span class="view-eyebrow">
+                        MAKE IT YOURS
+                    </span>
+
+                    <h2>
+                        Settings
+                    </h2>
+
+                    <span class="card-dots">
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+
+                </header>
+
+
+                <div class="settings-container">
+
+                    <div class="card settings-card">
+
+                        <div class="settings-card-header">
+
+                            <span class="view-eyebrow">
+                                YOUR PROFILE
+                            </span>
+
+                            <h3>
+                                A desk that knows your name.
+                            </h3>
+
+                            <p>
+                                Update the name used in your daily greeting.
+                                It is saved locally on this device.
+                            </p>
+
+                        </div>
+
+
+                        <div class="settings-form-row">
+
+                            <div class="input-group">
+
+                                <label for="settings-name-input">
+                                    Display name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="settings-name-input"
+                                    value=""
+                                >
+
+                            </div>
+
+
+                            <button
+                                id="settings-save-btn"
+                                class="primary-btn"
+                            >
+
+                                <i class="fa-solid fa-check"></i>
+                                Save name
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="card settings-card"
+                        style="margin-top: 24px;"
+                    >
+
+                        <div class="settings-card-header">
+
+                            <span class="view-eyebrow">
+                                DATA MANAGEMENT
+                            </span>
+
+                            <h3>
+                                Want to export?
+                            </h3>
+
+                            <p>
+                                Click the export button below to download your data.
+                            </p>
+
+                        </div>
+
+
+                        <div class="settings-form-row">
+
+                            <button
+                                id="export-data-btn"
+                                class="primary-btn"
+                                onclick="exportLocalStorageData()"
+                            >
+
+                                <i class="fa-solid fa-download"></i>
+                                Export Data (.json)
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="card settings-card"
+                        style="margin-top: 24px;"
+                    >
+
+                        <div class="settings-card-header">
+
+                            <span class="view-eyebrow">
+                                DATA MANAGEMENT
+                            </span>
+
+                            <h3>
+                                Want to import?
+                            </h3>
+
+                            <p>
+                                Upload a previously exported JSON backup file
+                                to restore your data.
+                            </p>
+
+                        </div>
+
+
+                        <div class="settings-form-row">
+
+                            <input
+                                type="file"
+                                id="import-file-input"
+                                accept=".json"
+                                style="display: none;"
+                                onchange="importLocalStorageData(event)"
+                            >
+
+                            <button
+                                id="import-data-btn"
+                                class="primary-btn"
+                                onclick="document.getElementById('import-file-input').click()"
+                            >
+
+                                <i class="fa-solid fa-upload"></i>
+                                Import Data (.json)
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
